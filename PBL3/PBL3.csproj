@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DF3A99B-D73C-4B95-965A-F882C57CEFE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL3</RootNamespace>
+    <AssemblyName>PBL3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DiemDanh_BLL.cs" />
+    <Compile Include="BLL\QLBieuDo_BLL.cs" />
+    <Compile Include="DTO\DoUongOrLoaiDoUong_ThongKe.cs" />
+    <Compile Include="DTO\LUONGNHANVIEN.cs" />
+    <Compile Include="DTO\NhanVienLuong.cs" />
+    <Compile Include="BLL\QLBan_BLL.cs" />
+    <Compile Include="BLL\QLDANGNHAP.cs" />
+    <Compile Include="BLL\QLDoanhThu_BLL.cs" />
+    <Compile Include="BLL\QLLoaiDU.cs" />
+    <Compile Include="BLL\QLMENU.cs" />
+    <Compile Include="BLL\QLTTNV.cs" />
+    <Compile Include="BLL\ThongKeLuong_BLL.cs" />
+    <Compile Include="DAL\CreateDB.cs" />
+    <Compile Include="DTO\BAN.cs" />
+    <Compile Include="DTO\BANTHANHTOAN.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\CHITIETHOADON.cs" />
+    <Compile Include="DTO\CHUCVU.cs" />
+    <Compile Include="DTO\DoanhThuOrLuong_Thang.cs" />
+    <Compile Include="DTO\Doanhthu_View.cs" />
+    <Compile Include="DTO\DOUONG.cs" />
+    <Compile Include="DTO\DoUong_View.cs" />
+    <Compile Include="DTO\DoUong_View1.cs" />
+    <Compile Include="DTO\HOADON.cs" />
+    <Compile Include="DTO\LOAIDOUONG.cs" />
+    <Compile Include="DTO\TAIKHOAN.cs" />
+    <Compile Include="DTO\THONGTINNHANVIEN.cs" />
+    <Compile Include="DTO\TTNV_View.cs" />
+    <Compile Include="DTO\TKNV_View.cs" />
+    <Compile Include="DAL\QLCF.cs" />
+    <Compile Include="View\AddNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddNV.Designer.cs">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddUpdateDU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUpdateDU.Designer.cs">
+      <DependentUpon>AddUpdateDU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdHome.Designer.cs">
+      <DependentUpon>AdHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BieuDoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BieuDoDoanhThu.Designer.cs">
+      <DependentUpon>BieuDoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BieuDoDoUong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BieuDoDoUong.Designer.cs">
+      <DependentUpon>BieuDoDoUong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BieuDoLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BieuDoLuong.Designer.cs">
+      <DependentUpon>BieuDoLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Chitiethoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Chitiethoadon.Designer.cs">
+      <DependentUpon>Chitiethoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ban.Designer.cs">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLBan.Designer.cs">
+      <DependentUpon>QLBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NVHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NVHome.Designer.cs">
+      <DependentUpon>NVHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLNV.Designer.cs">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TachBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TachBan.Designer.cs">
+      <DependentUpon>TachBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongKeLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongKeLuong.Designer.cs">
+      <DependentUpon>ThongKeLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLDoanhThu.Designer.cs">
+      <DependentUpon>QLDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GopBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GopBan.Designer.cs">
+      <DependentUpon>GopBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuyenBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChuyenBan.Designer.cs">
+      <DependentUpon>ChuyenBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLDoUong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLDoUong.Designer.cs">
+      <DependentUpon>QLDoUong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AddNV.resx">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddUpdateDU.resx">
+      <DependentUpon>AddUpdateDU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdHome.resx">
+      <DependentUpon>AdHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ban.resx">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BieuDoDoanhThu.resx">
+      <DependentUpon>BieuDoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BieuDoDoUong.resx">
+      <DependentUpon>BieuDoDoUong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BieuDoLuong.resx">
+      <DependentUpon>BieuDoLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Chitiethoadon.resx">
+      <DependentUpon>Chitiethoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QLBan.resx">
+      <DependentUpon>QLBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NVHome.resx">
+      <DependentUpon>NVHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QLNV.resx">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TachBan.resx">
+      <DependentUpon>TachBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongKeLuong.resx">
+      <DependentUpon>ThongKeLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QLDoanhThu.resx">
+      <DependentUpon>QLDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GopBan.resx">
+      <DependentUpon>GopBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuyenBan.resx">
+      <DependentUpon>ChuyenBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QLDoUong.resx">
+      <DependentUpon>QLDoUong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Button-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Close-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turn-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuyenban.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gopban.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grow-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chair1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matkhau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172497_lock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangxuat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nencoffe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk1.png" />
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Ban.png" />
+    <None Include="Resources\computer-icons-check-out-favicon-png-favpng-P4mwra8wsUYJLN7KnXvPqmaAt_t.jpg" />
+    <None Include="Resources\separate.png" />
+    <None Include="Resources\multiply.png" />
+    <None Include="Resources\button.png" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\Ban1.png" />
+    <Content Include="Resources\Bitmap1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
